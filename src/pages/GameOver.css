@@ -1,0 +1,12 @@
+/* GameOver */
+.GameOver {
+    text-align: center;
+}
+
+.GameOver .score {
+    padding: 1rem 0rem;
+}
+
+.GameOver .score span {
+    color: var(--secondary-color);
+}

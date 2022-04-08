@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root {
+    font-size: 18px;
+
+    --bg-color: #000;
+    --font-color: #FFF;
+
+    --heading-font-color : #112031;
+    --btn-color : red;
+
+    --random-color: #BC6FF1;
+
+    --width:40%;
+    --width-game:60%;
+    
+    --secondary-color : #892CDC;
+    --secondary-color-light: #BC6FF1;
+}
+/* Common */
+body {
+  
+    padding: .5rem 1rem 3rem 1rem;
+    font-size: 1rem;
+    border: 1px solid white;
+    width: var(--width);
+    margin: 1rem auto;
+    color: var(--font-color);
+    font-family: 'Poppins',
+    sans-serif;
+    background: var(--bg-color);
+
+}
+a {
+    text-decoration: none;
+    color: var(--font-color);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Utilities */
+.credits {
+    margin: 2rem 0rem 0rem 0rem;
+    font-size: .75rem;
+}
+.credits a {
+    text-decoration: underline;
+    text-decoration-color: var(--secondary-color-light);
+    color: var(--secondary-color-light);
+}
+.btn {
+    margin: 2rem 0rem;
+    border: 1px solid var(--secondary-color);
+    outline: none;
+    padding: .35rem 5rem;
+    cursor: pointer;
+
+    padding: .35rem 3rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-align: center;
+
+    color: var(--font-color);
+    background: var(--bg-color);
+
+    transition: all .2s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn:hover {
+    background: var(--secondary-color);
+}
+hr {
+    border: 0;
+    border-top: 1px solid var(--secondary-color-light);
+    margin: 0;
+    height: 1px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.displayRandom {
+    font-size: 3.5rem;
+    color: var(--secondary-color);
 }
 
-.App-link {
-  color: #61dafb;
+/* Responsive */
+@media screen and (max-width: 1000px) {
+    :root {
+        --width: 60%;
+        --width-game:80%;
+    }
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media screen and (max-width: 700px) {
+    :root {
+        font-size: 16px;
+        --width: 80%;
+    }
+    .Game .evalDiv {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 500px) {
+    :root {
+        --width:90%;
+    }
+    .Game .evalDiv {
+        width: 80%;
+    }
 }

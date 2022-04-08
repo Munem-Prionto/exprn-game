@@ -1,0 +1,13 @@
+/* Title */
+.Title {
+    text-align: center;
+    padding: 1rem 0rem;
+}
+
+.Title h1 {
+    font-size: 3rem;
+}
+
+.Title sup {
+    color: var(--secondary-color);
+}
